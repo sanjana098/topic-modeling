@@ -1,0 +1,28 @@
+Applications of semantic similarity
+
+-> Grouping similar words into semantic concepts. 
+-> In paraphrasing - Rewrite one sentence to another with same meaning
+-> Textual entailment - Smaller sentence entails its meaning from another piece of text (derives its meaning)
+
+Resource used - WordNet (For English)
+
+
+WordNet organizes information as a tree. 
+
+-> Shortest path between two concepts gives semantic similarity (Path similarity)
+Closer the two concepts are, more is the semantic similarity. (Inversely proportional to the distance).
+
+-> Lowest Common Subsumer (LCS) - Lin similarity
+Find the closest ancestor to both the concepts
+
+Lin similarity(u,v) = 2*log(P(LCS(u,v)))/ (log(P(u)) + log(P(v)))
+
+
+->Collocations and Distributional similarity -
+Two words appearing in similar context are more likely to be semantically related. 
+
+Compute strength of association of 2 words - 
+> How frequently they occur? Not similar if they don't occur together often,
+> How frequently the individual words occur? 'The' occurs very frequent.
+> Pointwise Mutual Information 
+	PMI(w,c) = log(P(w,c)/P(w)P(c))

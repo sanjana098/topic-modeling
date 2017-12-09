@@ -1,0 +1,28 @@
+A Document is a mixture of topics. 
+
+We know the corpus and the number of topics. But, we don't have idea about the actual topics and its distribution in the document.
+
+Topic modeling -
+
+-> Text clustering problem, where documents and words are clustered simultaneously.
+-> Approaches - 
+	PLSA (Probabilistic Latent Semantic Analysis)
+	LDA (Latent Dirichlet Allocation)  (Better and Popular)
+
+
+Generative models and LDA
+
+We take words from the topic model to 'generate' a document. (Generation)
+We take a doc and find the probability distribution in a model (Inference or Estimation)
+
+The topic models can be more than one. (Mixture model)
+
+
+LDA (A generative model)-
+	-> Choose the length of the document D
+	-> Choose the mixture of topics for the doc
+	-> Use topic's multinomial distribution to output words to fill the topic's quota
+
+-> Pre-processing text must be done (Tokenize, Normalize, Stop word removal, Stemming)
+-> Convert tokenized documents into Document Term matrix
+-> Build LDA models on top of it
